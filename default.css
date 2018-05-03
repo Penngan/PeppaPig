@@ -37,3 +37,23 @@ body{
     position: relative;
     z-index: -7;
 }
+#peppa{
+    position: relative;
+    width: 280px;
+    height: 382px;
+}
+#peppa *{
+    position: absolute;
+}
+.ground {
+    position: absolute;
+    margin: auto;
+    overflow: hidden;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 40%;
+    background-color: #77C76E;
+    border-radius: 50% 50% 50% 50% / 3% 9% 0% 0%;
+    z-index: -6;
+}
