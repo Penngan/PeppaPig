@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::before{
+    box-sizing: border-box
+}
+*::after{
+    box-sizing: border-box
+}
+body{
+    height: 100vh;
+    
+}
+.wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
+}
+#code{
+    flex: 1;
+    width: 50%;
+    background: #f2f2f2;
+    overflow: auto;
+}
+.preview{
+    flex: 1;
+    width: 50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#87B9F6;
+    position: relative;
+    z-index: -7;
+}
