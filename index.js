@@ -1,23 +1,24 @@
-    let audio = new Audio()
+    let audio = new Audio('http://k003.kiwi6.com/hotlink/rp4oqnc06k/Marty_-_Granpa_s_Little_Train_Song.mp3')
     audio.autoplay = true
     audio.loop = true
-    function getMusic(){
-        var xhr = new XMLHttpRequest()
-        xhr.open('GET','music.json',true)
-        xhr.onload = function(){
-            if((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304){
-                let music = JSON.parse(xhr.responseText)
-                audio.src = music[0].src
-            }else{
-                console.log('获取数据失败')
-            }
-        }
-        xhr.onerror = function(){
-            console.log('网络异常')
-        }
-        xhr.send()
-    }
-    getMusic()
+    // function getMusic(){
+    //     var xhr = new XMLHttpRequest()
+    //     xhr.open('GET','music.json',true)
+    //     xhr.onload = function(){
+    //         if((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304){
+    //             let music = JSON.parse(xhr.responseText)
+    //             audio.src = music[0].src
+    //             console.log(music[0].src)
+    //         }else{
+    //             console.log('获取数据失败')
+    //         }
+    //     }
+    //     xhr.onerror = function(){
+    //         console.log('网络异常')
+    //     }
+    //     xhr.send()
+    // }
+    // getMusic()
 
     function writeCode(prefix, code, fn){
         let container = document.querySelector('#code')
