@@ -1,23 +1,24 @@
-    audio = new Audio()
-    audio.autoplay = true
-    audio.loop = true
-    function getMusic(){
-        var xhr = new XMLHttpRequest()
-        xhr.open('GET','music.json',true)
-        xhr.onload = function(){
-            if((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304){
-                let music = JSON.parse(xhr.responseText)
-                audio.src = music[0].src
-            }else{
-                console.log('获取数据失败')
-            }
-        }
-        xhr.onerror = function(){
-            console.log('网络异常')
-        }
-        xhr.send()
-    }
-    getMusic()
+    // let audio = new Audio()
+    // audio.autoplay = true
+    // audio.loop = true
+    // function getMusic(){
+    //     var xhr = new XMLHttpRequest()
+    //     xhr.open('GET','music.json',true)
+    //     xhr.onload = function(){
+    //         if((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304){
+    //             let music = JSON.parse(xhr.responseText)
+    //             audio.src = music[0].src
+    //             console.log(music[0].src)
+    //         }else{
+    //             console.log('获取数据失败')
+    //         }
+    //     }
+    //     xhr.onerror = function(){
+    //         console.log('网络异常')
+    //     }
+    //     xhr.send()
+    // }
+    // getMusic()
 
     function writeCode(prefix, code, fn){
         let container = document.querySelector('#code')
